@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+set -x
+cf ssh s3-demo-app -t -c "/bin/sh -c \". /root/s3-env; sh\""

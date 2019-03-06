@@ -1,0 +1,2 @@
+#!/bin/sh
+echo https://${BUCKET_NAME}.s3.amazonaws.com/testfile.txt

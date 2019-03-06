@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -x
+cf bind-service s3-demo-app demo-s3
+cf restage s3-demo-app

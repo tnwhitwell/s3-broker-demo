@@ -1,0 +1,6 @@
+#!/bin/sh
+epoch=$(date +%s)
+echo "This is a test file. Epoch: ${epoch}" > ../dummydata/testfile.txt
+echo "${epoch}"
+set -x
+aws s3 cp ../dummydata/testfile.txt s3://${BUCKET_NAME}

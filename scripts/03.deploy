@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+set -x
+cf push s3-demo-app -o tnwhitwell/paas-s3-demo-app:latest --no-route -u none

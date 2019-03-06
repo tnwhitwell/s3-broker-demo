@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -x
+cf create-org tnw-s3-broker-demo
+cf target -o tnw-s3-broker-demo
+cf create-space s3-broker-demo
+cf target -o tnw-s3-broker-demo -s s3-broker-demo
+set +x
+cf enable-service-access aws-s3-bucket -o tnw-s3-broker-demo
+cf set-quota tnw-s3-broker-demo small

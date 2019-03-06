@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -x
+cf unbind-service s3-demo-app demo-s3
+cf delete-service -f demo-s3
+cf delete -f s3-demo-app
+set +x
+cf delete-org -f tnw-s3-broker-demo
+cf logout
