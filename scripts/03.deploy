@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 set -x
-cf push s3-demo-app -o tnwhitwell/paas-s3-demo-app:latest --no-route -u none
+cf push s3-demo-app-1 -o tnwhitwell/paas-s3-demo-app:latest --no-route -u none --no-start
+cf push s3-demo-app-2 -o tnwhitwell/paas-s3-demo-app:latest --no-route -u none --no-start

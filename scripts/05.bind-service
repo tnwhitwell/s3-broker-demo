@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 set -x
-cf bind-service s3-demo-app demo-s3
-cf restage s3-demo-app
+cf bind-service s3-demo-app-1 demo-s3
+cf bind-service s3-demo-app-2 demo-s3
+cf start s3-demo-app-1
+cf start s3-demo-app-2 >/dev/null 2>&1 &

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -x
+cf ssh s3-demo-app-1 -c "/bin/sh -c \". /root/s3-env; /root/s3-put\""
+cf unbind-service s3-demo-app-1 demo-s3
+cf unbind-service s3-demo-app-2 demo-s3
+cf delete-service -f demo-s3
